@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links left">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+            </div>
+
+            <ul class="nav-links right">
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home">
+            <img src="profil.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>Home</h2>
+            <p>Hai, saya <span class="gold">M. Zidan Maulana</span>. Saya seorang pengembang web yang berfokus pada pembuatan situs web yang menarik dan <span class="gold">fungsional</span>.</p>
+            <h3>About Me</h3>
+            <p>Saya memiliki pengalaman dalam membuat situs web yang <span class="gold">fungsional</span>, <span class="gold">responsif</span>, <span class="gold">modern</span>, dan <span class="gold">user-friendly</span>. Saya sangat suka dalam proses pembuatan <span class="gold">logika</span> dalam pengembangan web, pengembangan gim, dan cara AI bekerja dibalik layar.</p>
+            <p>Saya juga sangat suka menyelesaikan tantangan yang <span class="gold">kompleks</span> dan terus belajar hal <span class="gold">baru</span> dalam dunia teknologi.</p>
+            <p>Dalam <span class="gold">kerjasama tim</span>, saya dapat memberikan kontribusi besar yang sangat mempengaruhi proyek dan kinerja tim. Karena itu, saya selalu diandalkan dalam tim, jadi saya mampu menjadi seorang <span class="gold">pemimpin</span> yang memberikan pengaruh positif.</p>
+            <p>Berkat kemampuan saya dalam <span class="gold">critical thinking</span>, saya mampu menganalisis masalah dengan baik dan menemukan solusi yang <span class="gold">inovatif</span>.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Laragon</li>
+                <li>Git</li>
+                <li>Writing</li>
+                <li>Critical Thinking</li>
+                <li>Problem Solving</li>
+            </ul>
+            <a href="skills/index.html">See More</a>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="gallery/photo/webrekammedis (1).png" alt="Project rekam medis 1">
+                    <p>Project rekam medis 1</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/photo/webrekammedis (2).png" alt="Project rekam medis 2">
+                    <p>Project rekam medis 2</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/photo/webrekammedis (3).png" alt="Project rekam medis 3">
+                    <p>Project rekam medis 3</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/photo/tabelsiswa.png" alt="Project tabel siswa">
+                    <p>Project tabel siswa</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/photo/pyproject.png" alt="Project batu gunting kertas sederhana">
+                    <p>Project batu gunting kertas sederhana</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/photo/laragon.png" alt="Laragon">
+                    <p>Laragon</p>
+                </div>
+            </div>
+            <a href="gallery/index.html">See More</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <label for="name">Nama</label>  
+            <input type="text" id="name" name="name" placeholder="nama">
+            <label for="email" >Email</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" placeholder="pesan"></textarea>
+            <p id="alert"></p>
+            <button type="submit">Kirim</button>
+        </section>
+    </div>
+
+    <div id="gallery-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-expanded">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
