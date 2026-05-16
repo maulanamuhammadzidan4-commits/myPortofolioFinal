@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Soft Skills Page Stylesheet (sskills.css)
+   ========================================================================== */
+
+:root {
+    --kurumi-black: #121212;
+    --kurumi-full-black: #000000;
+    --kurumi-red: #8b0000;
+    --kurumi-light-red: #ff0000;
+    --kurumi-dark-red: #4a0000;
+    --kurumi-gold: #d4af37;
+    --kurumi-light-gold: #ffd700;
+    --kurumi-dark-gold: #b8860b;
+    --kurumi-gray: #333333;
+    --kurumi-light-gray: #555555;
+    --kurumi-dark-gray: #1a1a1a;
+    --kurumi-white: #f5f5f5;
+    --kurumi-light-white: #e0e0e0;
+    --kurumi-full-white: #ffffff;
+}
+
+body {
+    background: var(--kurumi-black);
+    color: var(--kurumi-white);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--kurumi-white);
+    text-shadow: 0 0 10px var(--kurumi-red);
+    margin-bottom: 40px;
+}
+
+/* Container Utama untuk Kategori Soft Skills */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Desain Kartu untuk Setiap Kategori Skill */
+#thinking-skill, 
+#people-leadership, 
+#communication-skill, 
+#self-management {
+    flex: 1;
+    min-width: 250px;
+    max-width: 280px;
+    background-color: var(--kurumi-dark-gray);
+    border: 2px solid var(--kurumi-red);
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+/* Efek Hover pada Kartu Kategori */
+#thinking-skill:hover, 
+#people-leadership:hover, 
+#communication-skill:hover, 
+#self-management:hover {
+    transform: translateY(-8px);
+    border-color: var(--kurumi-gold);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Pengaturan sub judul */
+
+.container h2 {
+    color: var(--kurumi-gold);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed var(--kurumi-red); /* Garis pembatas bawah putus-putus merah */
+    text-shadow: 0 0 5px rgba(214, 175, 55, 0.3); /* Efek kilau emas tipis */
+}
+
+/* Pengaturan List Item */
+.container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Efek Hover pada Setiap Item Skill (List) */
+.container li:hover {
+    background: var(--kurumi-light-red);
+    color: var(--kurumi-full-white);
+    padding-left: 15px; /* Efek bergeser sedikit ke kanan */
+}
+
+/* Styling Icon di dalam List */
+.container li i {
+    margin-right: 15px;
+    font-size: 1.3rem;
+    color: var(--kurumi-gold);
+    width: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container li:hover i {
+    color: var(--kurumi-full-white);
+    transform: scale(1.2);
+}
+
+/* ==========================================================================
+   Styling untuk Modal (Pop-up)
+   ========================================================================== */
+.modal {
+    display: none; /* Disembunyikan secara default, diatur lewat sskills.js */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Latar belakang gelap transparan */
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--kurumi-dark-gray);
+    margin: auto;
+    padding: 30px;
+    border: 2px solid var(--kurumi-gold);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px var(--kurumi-gold);
+    animation: modalSlideIn 0.4s ease;
+}
+
+/* Animasi Muncul untuk Modal */
+@keyframes modalSlideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Tombol Tutup (Close) Modal */
+.close-skill {
+    color: var(--kurumi-light-white);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-skill:hover {
+    color: var(--kurumi-light-red);
+}
+
+/* Elemen Di Dalam Modal */
+#skill-icon {
+    font-size: 3.5rem;
+    color: var(--kurumi-gold);
+    margin-bottom: 15px;
+}
+
+#skill-title {
+    font-size: 1.8rem;
+    color: var(--kurumi-white);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#skill-desc {
+    color: var(--kurumi-light-white);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--kurumi-light-gray);
+}
+
+footer a {
+    color: var(--kurumi-light-gray);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--kurumi-gold);
+    text-shadow: 0 0 10px var(--kurumi-gold);
+}
+
+.media-sosial a {
+    color: var(--kurumi-light-gray);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.media-sosial a:hover {
+    color: var(--kurumi-gold);
+    text-shadow: 0 0 10px var(--kurumi-gold);
+}
+
+/* ==========================================================================
+   Responsive Design (Media Query)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #thinking-skill, 
+    #people-leadership, 
+    #communication-skill, 
+    #self-management {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}

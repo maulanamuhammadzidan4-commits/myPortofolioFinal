@@ -577,3 +577,56 @@ footer {
     color: #777;
     font-size: 0.9rem;
 }
+
+/* --- Penyesuaian Ikon Font Awesome --- */
+
+/* 1. Ikon di Navbar */
+.nav-links li a i {
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    color: var(--kurumi-red); /* Menggunakan variabel merahmu */
+    transition: all 0.3s ease;
+}
+
+/* Efek saat menu navbar di-hover */
+.nav-links li a:hover i {
+    color: var(--kurumi-gold); /* Berubah jadi emas saat disentuh */
+    transform: scale(1.2);    /* Sedikit membesar */
+}
+
+/* 2. Ikon di Section Skills */
+#skills ul li i {
+    display: block;        /* Membuat ikon di atas teks */
+    font-size: 2.5rem;    /* Ukuran ikon lebih besar */
+    margin-bottom: 15px;  /* Jarak ikon ke teks skill */
+    color: var(--kurumi-gold); /* Warna emas khas Zafkiel */
+    transition: all 0.3s ease;
+}
+
+/* Efek khusus untuk ikon skill saat kotaknya di-hover */
+#skills ul li:hover i {
+    color: var(--kurumi-white); /* Berubah putih agar kontras saat bg jadi merah */
+    transform: rotate(360deg);  /* Animasi putar (seperti jam Zafkiel) */
+}
+
+.link i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+    color: var(--kurumi-light-red); /* Warna merah untuk ikon */
+    transition: all 0.3s ease;
+}
+.link:hover i {
+    color: var(--kurumi-white); /* Berubah jadi putih saat hover */
+    transform: translateX(5px); /* Ikon bergeser sedikit ke kanan */
+}
+
+.media-sosial a {
+    color: var(--kurumi-light-red);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.media-sosial a:hover {
+    color: var(--kurumi-gold);
+    transform: translateY(-5px) scale(1.2);
+    text-shadow: 0 0 10px var(--kurumi-gold);
+}

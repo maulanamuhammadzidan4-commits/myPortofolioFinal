@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --kurumi-black: #121212;      /* Kegelapan abadi */
+  --kurumi-full-black: #000000;       /* Hitam pekat untuk latar belakang */
+  --kurumi-red: #8b0000;        /* Merah crimson yang elegan */
+  --kurumi-light-red: #ff0000;      /* Merah tomat yang cerah */
+  --kurumi-dark-red: #4a0000;       /* Merah gelap untuk latar belakang */
+  --kurumi-gold: #d4af37;       /* Emas jarum jam Zafkiel */
+  --kurumi-light-gold: #ffd700;     /* Emas cerah untuk aksen */
+  --kurumi-dark-gold: #b8860b;      /* Emas gelap untuk kontras */
+  --kurumi-gray: #333333;       /* Abu-abu untuk teks dan elemen sekunder */
+  --kurumi-light-gray: #555555;     /* Abu-abu terang untuk teks yang lebih ringan */
+  --kurumi-dark-gray: #1a1a1a;  /* Abu-abu gelap untuk kontras */
+  --kurumi-white: #f5f5f5;      /* Kontras yang murni */
+  --kurumi-light-white: #e0e0e0;  /* Putih terang untuk teks yang lebih lembut */
+  --kurumi-full-white: #ffffff;      /* Putih murni untuk aksen */
+}
+
+body {
+    background-color: var(--kurumi-black);
+    color: var(--kurumi-white);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    color: var(--kurumi-red);
+    text-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    color: var(--kurumi-light-red);
+    text-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+h1 i {
+    margin-right: 15px;
+    color: var(--kurumi-gold);
+}
+
+/* Container List Skill */
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Item List sebagai pemicu (Trigger) */
+.skills ul li {
+    background: var(--kurumi-black);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--kurumi-red);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skills ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.4);
+    border: 2px solid var(--kurumi-gold);
+}
+
+.skills ul li i {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--kurumi-gold);
+}
+
+/* --- Gaya Modal / Card Mengambang --- */
+.modal {
+    display: none; /* Sembunyi secara default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+
+
+.modal-content {
+    background-color: var(--kurumi-black);
+    margin: 10% auto;
+    padding: 40px;
+    border: 2px solid var(--kurumi-gold);
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px var(--kurumi-red);
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Detail di dalam Card */
+#skill-icon {
+    font-size: 5rem;
+    color: var(--kurumi-gold);
+    margin-bottom: 20px;
+}
+
+#skill-title {
+    color: var(--kurumi-red);
+    margin-bottom: 10px;
+}
+
+#skill-desc {
+    color: var(--kurumi-white);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.close-skill{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--kurumi-white);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-skill:hover {
+    color: var(--kurumi-red);
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--kurumi-light-gray);
+}
+
+footer a {
+    color: var(--kurumi-light-gray);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--kurumi-gold);
+    text-shadow: 0 0 10px var(--kurumi-gold);
+}
+
+.media-sosial a {
+    color: var(--kurumi-light-gray);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.media-sosial a:hover {
+    color: var(--kurumi-gold);
+    text-shadow: 0 0 10px var(--kurumi-gold);
+    text-decoration: underline;
+}

@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --kurumi-black: #121212;      /* Kegelapan abadi */
+  --kurumi-full-black: #000000;       /* Hitam pekat untuk latar belakang */
+  --kurumi-red: #8b0000;        /* Merah crimson yang elegan */
+  --kurumi-light-red: #ff0000;      /* Merah tomat yang cerah */
+  --kurumi-dark-red: #4a0000;       /* Merah gelap untuk latar belakang */
+  --kurumi-gold: #d4af37;       /* Emas jarum jam Zafkiel */
+  --kurumi-light-gold: #ffd700;     /* Emas cerah untuk aksen */
+  --kurumi-dark-gold: #b8860b;      /* Emas gelap untuk kontras */
+  --kurumi-gray: #333333;       /* Abu-abu untuk teks dan elemen sekunder */
+  --kurumi-light-gray: #555555;     /* Abu-abu terang untuk teks yang lebih ringan */
+  --kurumi-dark-gray: #1a1a1a;  /* Abu-abu gelap untuk kontras */
+  --kurumi-white: #f5f5f5;      /* Kontras yang murni */
+  --kurumi-light-white: #e0e0e0;  /* Putih terang untuk teks yang lebih lembut */
+  --kurumi-full-white: #ffffff;      /* Putih murni untuk aksen */
+}
+
+body {
+    background: var(--kurumi-black);
+    color: var(--kurumi-white);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container utama untuk membungkus tombol */
+.container {
+    display: flex;
+    flex-direction: row; /* Mengatur tombol berjajar ke samping */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Jarak antar tombol */
+    height: 100vh; /* Membuat container berada di tengah layar secara vertikal */
+    padding: 0 20px;
+}
+
+/* Style dasar untuk setiap item skill (yang berfungsi sebagai tombol) */
+#hard-skill, 
+#soft-skill, 
+#other-skill {
+    flex: 1; /* Membuat semua tombol memiliki lebar yang sama */
+    max-width: 250px;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--kurumi-dark-gray);
+    color: var(--kurumi-white);
+    border: 2px solid var(--kurumi-red);
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px var(--kurumi-red); /* Shadow emas tipis */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efek Hover: Berubah menjadi Merah sesuai tema Kurumi */
+#hard-skill:hover, 
+#soft-skill:hover, 
+#other-skill:hover {
+    background-color: var(--kurumi-light-red);
+    color: var(--kurumi-full-white);
+    border-color: var(--kurumi-light-red);
+    transform: translateY(-10px) scale(1.05); /* Sedikit naik ke atas */
+    box-shadow: 0 10px 20px var(--kurumi-red); /* Shadow merah menyala */
+    letter-spacing: 3px;
+}
+
+/* Efek garis bercahaya di bawah teks saat hover */
+#hard-skill:after,
+#soft-skill:after,
+#other-skill:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--kurumi-gold);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+#hard-skill:hover:after,
+#soft-skill:hover:after,
+#other-skill:hover:after {
+    width: 80%;
+}
+
+/* Efek saat tombol diklik */
+#hard-skill:active,
+#soft-skill:active,
+#other-skill:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* Responsif untuk layar HP agar berubah menjadi kolom jika layar terlalu kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    #hard-skill, #soft-skill, #other-skill {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+#hard-skill i,
+#soft-skill i,
+#other-skill i {
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--kurumi-light-gray);
+}
+
+footer a {
+    color: var(--kurumi-light-gray);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--kurumi-gold);
+    text-shadow: 0 0 10px var(--kurumi-gold);
+}
+
+.media-sosial a {
+    color: var(--kurumi-light-gray);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.media-sosial a:hover {
+    color: var(--kurumi-gold);
+    text-shadow: 0 0 10px var(--kurumi-gold);
+}
+
