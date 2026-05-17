@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>My Works</h1>
+    <div class="container">
+        <div class="img-gallery">
+            <img src="photo/tabelsiswa.png" alt="Project tabel siswa untuk menentukan status kelulusannya.">
+            <p class="judul">Projek Tabel Siswa</p>
+        </div>
+        <div class="img-gallery">
+            <img src="photo/codepyproject.png" alt="Kode Python untuk permainan batu gunting kertas sederhana menggunakan logika sederhana.">
+            <p class="judul">Python Code</p>
+        </div>
+        <div class="img-gallery">
+            <img src="photo/coderekammedis.png" alt="Struktur HTML untuk menampilkan bagian awal pada projek rekam medis.">
+            <p class="judul">HTML Structures</p>
+        </div>
+        <div class="img-gallery">
+            <img src="photo/webrekammedis (2).png" alt="Tampilan awal dari pojek web rekam medis.">
+            <p class="judul">Projek Web Rekam Medis</p>
+            <a href="https://maulanamuhammadzidan4-commits.github.io/rekammedis/" target="_blank" class="demo-link">
+                <i class="fa-solid fa-link"></i> Live Demo
+            </a>
+        </div>
+        <div class="img-gallery">
+            <img src="photo/laragon.png" alt="Tampilan awal aplikasi sebelum digunakan.">
+            <p class="judul">Laragon</p>
+        </div>
+        <div class="img-gallery">
+            <img src="photo/pyproject.png" alt="Hasil dari kode game gunting batu kertas sederhana.">
+            <p class="judul">Batu Gunting Kertas</p>
+        </div>
+    </div>
+
+    <div id="gallery-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-expanded">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="media-sosial">
+            <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/maulanamuhammadzidan4-commits" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div><br>
+        <p>&copy; 2026 My Portfolio. All rights reserved. <a href="../index.html" class="back-link">Back</a></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
